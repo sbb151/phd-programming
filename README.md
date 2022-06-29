@@ -9,5 +9,21 @@ The objective of this course is to provide a foundation for accounting doctoral 
 
 Each student will choose a published research paper and attempt to replicate the main tables from the paper using Stata. Papers need to be approved in advance for suitability. During the last meeting of the course, students will present their Stata code and any tables generated from the replication exercise.
 
+## Course topics:
+***
+**Session 1**  
+June 29, 2022  
+
+* Computer setup
+* Overview of WRDS
+* Introduction to PostgreSQL
+***
+
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
 
 <!-- [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sbb151/phd-programming.git/HEAD) -->
