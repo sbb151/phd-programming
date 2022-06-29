@@ -14,16 +14,21 @@ Each student will choose a published research paper and attempt to replicate the
 **Session 1**  
 June 29, 2022  
 
-* Computer setup
-* Overview of WRDS
-* Introduction to PostgreSQL
+- Computer setup
+- Overview of WRDS
+- Introduction to Stata
+  1. Creating a profile
+  2. Documentng your work: The do-file
+  3. Logging output
+- Introduction to PostgreSQL
+- Querying the WRDS database
+  1. Basic `SELECT` statements
+  2. Joins
+  3. Aggregate functions
+  4. Subqueries
 ***
 
 
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
+
 
 <!-- [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sbb151/phd-programming.git/HEAD) -->
