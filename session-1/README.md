@@ -25,7 +25,7 @@ Main command:
 odbc load, clear dsn("Your DSN") exec("Your query")
 ```
 
-One tip when you are executing SQL queries is that you may want to place different parts of your query on different lines. The wasy to deal with this is to change the line delimiter with `#delimit ;`.
+One tip when you are executing SQL queries is that you may want to place different parts of your query on different lines. The wasy to deal with this is to change the line delimiter with `#delimit ;`. To change the delimiter back to a carriage return, simply include the code `#delimit cr`.
 
 Below we will use this method to grab a few lines of data.
 
@@ -42,6 +42,8 @@ odbc load, clear dsn(wrds) exec("
 
 list in 1/15
 ```
+
+`list` will print the contents of your dataset to the results window of Stata. The `in` portion of the command captures what rows you want to print. If you omit `in`, then the command will print the entire dataset.
 
 ### The SELECT statement
 
@@ -141,6 +143,8 @@ odbc load, clear dsn(wrds) exec("
 list in 1/10
 count
 ```
+
+`count` will print the number of observations in the dataset to the results window of Stata.
 
 7. Using a date range
 
