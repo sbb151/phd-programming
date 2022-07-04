@@ -25,7 +25,8 @@ Main command:
 odbc load, clear dsn("Your DSN") exec("Your query")
 ```
 
-One tip when you are executing SQL queries is that you may want to place different parts of your query on different lines. The wasy to deal with this is to change the line delimiter with `#delimit ;`. To change the delimiter back to a carriage return, simply include the code `#delimit cr`.
+One tip when you are executing SQL queries is that you may want to place different parts of your query on different lines. The wasy to deal with this is to change the line delimiter with `#delimit ;`. To change the delimiter back to a carriage return, simply include the code `#delimit cr`. It can be used only in do-files and ado-files, which we will discuss in the next session.
+
 
 Below we will use this method to grab a few lines of data.
 
