@@ -1,5 +1,8 @@
 # Session 2 notes
 
+## An excellenet resource for PostgreSQL programming
+[Tutorialspoint](https://www.tutorialspoint.com/postgresql/)
+
 ## Some Stata basics with data
 
 Sometimes you will want to retain a record of the screen output from running your do files. How would you go about doing this? Well, Stata has a "log" command that will allow you to save window output. Let's give it a try.
