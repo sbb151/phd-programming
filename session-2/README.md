@@ -1,6 +1,6 @@
 # Session 2 notes
 
-## An excellenet resource for PostgreSQL programming
+## An excellent resource for PostgreSQL programming
 [Tutorialspoint](https://www.tutorialspoint.com/postgresql/)
 
 ## Some Stata basics with data
