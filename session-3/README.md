@@ -29,7 +29,7 @@ odbc load, clear dsn(wrds) exec("
 - Check for duplicates by gvkey-datadate
 
 ```stata
-bysort gvkey datadate: keep if _N==1
+duplicates report gvkey datadate
 ```
 
   | copies | observations    |   surplus|
@@ -41,7 +41,7 @@ bysort gvkey datadate: keep if _N==1
 - To keep a unique set of gvkey-datadate pairs, code the following:
 
 ```stata
-bysort gvkey rdq: keep if _N==1
+bysort gvkey datadate: keep if _N==1
 ```
 
 - Check for duplicates by gvkey-rdq
@@ -78,6 +78,10 @@ Duplicates in terms of gvkey-rdq:
    |    22 |           22   |         21|
    |    23 |           23   |         22|
    |    24 |           24   |         23|
+   
+```stata
+bysort gvkey rdq: keep if _N==1
+```
 
 `_N` refers to the total count of observations in a given "by group." These groups are defined before the colon and after the command `bysort` which can be abbreviated to `bys` if you want.
 
