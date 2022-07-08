@@ -357,7 +357,7 @@ odbc load, clear dsn(wrds) exec("
 #delimit cr
 }
 
-cwf eadates
+cwf cclink
 browse
 ```
 
