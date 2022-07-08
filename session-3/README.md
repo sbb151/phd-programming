@@ -407,7 +407,7 @@ browse
 
 ```stata
 frame eadates: frlink m:1 gvkey, frame(names)
-frame eadates: frget cik, from(names)
+frame eadates: frget sic, from(names)
 
 cwf eadates
 browse
