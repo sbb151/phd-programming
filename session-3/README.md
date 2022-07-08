@@ -2,7 +2,7 @@
 
 ## Stata next steps
 
-- Set up a path for today's lession.
+- Set up a path for today's session.
 
 ```stata
 global path "PLACE YOUR PATH HERE"
