@@ -361,18 +361,20 @@ cwf cclink
 browse
 ```
 
-- Earnings announcement ates from 2011–2015
+- Earnings announcement dates from 2011–2015
 
 ```stata
-mkf names
+mkf eadates
 
-frame names {
+frame eadates {
 		#delimit ;
 odbc load, clear dsn(wrds) exec("
 	select 
-		*
+		distinct gvkey, rdq
 	from 
-		comp.names");
+		comp.fundq
+	where
+		extract(year from rdq) between 2011 and 2015");
 
 #delimit cr
 }
