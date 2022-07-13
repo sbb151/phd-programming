@@ -447,3 +447,6 @@ program sortorder
 
 end
 ```
+
+## Practice exercise
+
