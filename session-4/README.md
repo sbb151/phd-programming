@@ -316,7 +316,7 @@ save "$path/retvol", replace
 
 ## Advanced summarization using `statsby`
 
-The `collapse` command is very useful but it cannot capture more advanced staistics such as regression coefficients or $R^2$s. For these more complex computations, you will want to invoke the `statsby` command.
+The `collapse` command is very useful but it cannot capture more advanced staistics such as regression coefficients or $R^2$. For these more complex computations, you will want to invoke the `statsby` command.
 
 Let's calculate some annual stock market betas using daily data over the 2011-2012 period.
 
