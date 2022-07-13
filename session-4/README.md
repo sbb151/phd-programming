@@ -450,6 +450,6 @@ end
 
 ## Practice exercise
 
-Calculate the change in dispersion (standard deviation) in analyst EPS forecasts about quarter $t+1$ around the earning announcement for quarter $t$ using quarterly data from IBES over the 2011-2015 period. Measure pre-announcement dispersion using forecasts made during the 45 days before the earnings announcement and post-announcement dispersion using forecasts made during the 30 days after the earnings announcement.
+Calculate the change in dispersion (standard deviation) in analyst EPS forecasts about quarter $t+1$ around the earnings announcement for quarter $t$ using quarterly data from IBES over the 2011-2015 period. Measure pre-announcement dispersion using forecasts made during the 45 days before the earnings announcement and post-announcement dispersion using forecasts made during the 30 days after the earnings announcement (including the earnings announcement day).
 
 [Upload](https://drive.google.com/drive/folders/14dbVL64YrdAOK9cBMydeR4Kl9drPTaga?usp=sharing) your code when you are finished.
