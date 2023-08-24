@@ -17,6 +17,27 @@ LIMIT
 
 You will generally always have `SELECT`, `FROM`, and `WHERE`. The other commands can be used to create more refined queries.
 
+## Determine the data libraries available at WRDS
+
+```stata
+odbc load, exec("select distinct frname from wrds_lib_internal.friendly_schema_mapping;") dsn("wrds")
+list
+```
+
+## Determine the datasets within a given library
+
+```stata
+odbc load, exec("select distinct table_name from information_schema.columns where table_schema='library' order by table_name;") dsn("wrds")
+list
+```
+
+## Determine the variables (column headers) within a given dataset
+
+```stata
+odbc load, exec("select column_name from information_schema.columns where table_schema='library' and table_name='dataset' order by column_name;") dsn("wrds")
+list
+```
+
 ## Accessing data from WRDS in Stata
 
 Main command:
@@ -260,4 +281,3 @@ list in 1/20
 1. Capture the average ROA by year for Compustat firms with total assets that are greater than \$10 million for the period 1990–2010.
 2. Return the number of analysts issuing EPS forecasts for Apple, Facebook, and Google during the 2011–2015 period by quarter.
 
-[Upload](https://drive.google.com/drive/folders/14UP1iOKSqlmglw_gHWguwcmvnL801kHO?usp=sharing) your code before our next class on July 6.
