@@ -1074,6 +1074,3 @@ type(x)
 
 
 
-```python
-import wrds
-```
