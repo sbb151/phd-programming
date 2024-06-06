@@ -171,4 +171,4 @@ Calculate the consensus (mean) EPS forecast for U.S. I/B/E/S covered firms from 
 
 When finished, export the company's ticker, fiscal period end date, analyst code, optimism indicator, and pessimism indicator to an Excel file called "analyst-vs-consensus.xlsx"
 
-[Upload](https://drive.google.com/drive/folders/1NTrUmyeEkkYFDZra8FHf9_EICHAGZ5xd?usp=sharing) your exercises before our next session.
+We will take a look at what you figured out next time.
