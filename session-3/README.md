@@ -469,5 +469,5 @@ $\frac{EPS_{Actual}-EPS_{Consensus}}{Price_{Beg}}$
 
 You will need IBES and CRSP data for this exercise and, likely, some of the WRDS user manuals to help with variable definitions. A consensus forecast is usually defined as the mean of analysts' forecasts made is a window prior to the earnings announcement (often days -90 to -1).
 
-[Upload](https://drive.google.com/drive/folders/1NVDveZQzQcM6P0whKrPJ5cTK0J4xvOlo?usp=sharing) your code when you are finished.
+
 
