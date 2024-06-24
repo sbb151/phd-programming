@@ -28,6 +28,7 @@ Notice that you don't need to add the suffix ".dta" because Stata assumes that.
 ### Let's only retain observations with all variables available
 
 ```stata
+drop if missing(size,lev,intcov,prof,nrating,retvol,beta)
 ```
 
 ## Calculate descriptive statistics
