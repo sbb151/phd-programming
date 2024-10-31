@@ -17,7 +17,7 @@ How would we accomplish this?
 ```stata
 #delimit ;
 
-odbc load, clear dsn(wrds) exec("
+jdbc load, clear exec("
 	select gvkey, datadate, rdq, atq, niq
 	from comp.fundq
 	where
@@ -89,7 +89,7 @@ Let's do something else useful. Let's calculate some cash flow from operations a
 
 ```stata
 #delimit ;
-odbc load, clear dsn(wrds) exec("
+jdbc load, clear exec("
 	select gvkey, datadate, fyearq, fqtr, oancfy
 	from comp.fundq
 	where
@@ -160,7 +160,7 @@ We need to load data from CRSP to help us identify trading days.
 
 ```stata
 #delimit ;
-odbc load, clear dsn(wrds) exec("
+jdbc load, clear exec("
 	select date 
 	from crsp.dsi");
 
@@ -174,7 +174,7 @@ bcal create trading, replace from(date) dateformat(dmy) center(01jan1960) maxgap
 
 ```stata
 #delimit ;
-odbc load, clear dsn(wrds) exec("
+jdbc load, clear exec("
 	select 
 		distinct gvkey, rdq 
 	from 
@@ -245,7 +245,7 @@ We can use the time-series setup feature.
 
 ```stata
 #delimit ;
-odbc load, clear dsn(wrds) exec("
+jdbc load, clear exec("
 	select 
 		distinct gvkey, rdq, fyearq, fqtr, niq, atq
 	from 
@@ -346,7 +346,7 @@ mkf cclink
 frame cclink {
 	
 	#delimit ;
-odbc load, clear dsn(wrds) exec("
+jdbc load, clear exec("
 	select 
 		gvkey, lpermno as permno, linkdt, coalesce(linkenddt,current_date) as linkenddt
 	from 
@@ -368,7 +368,7 @@ mkf eadates
 
 frame eadates {
 		#delimit ;
-odbc load, clear dsn(wrds) exec("
+jdbc load, clear exec("
 	select 
 		distinct gvkey, rdq
 	from 
@@ -390,7 +390,7 @@ mkf names
 
 frame names {
 		#delimit ;
-odbc load, clear dsn(wrds) exec("
+jdbc load, clear exec("
 	select 
 		*
 	from 
