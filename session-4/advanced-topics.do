@@ -1,6 +1,6 @@
 // Set path to folder
 
-global path "/Volumes/HD1/Google Drive/Programming Course/Day 5"
+global path "./Session4"
 
 /*
 Let's finish our merging from last time. How can we attach the initial
@@ -210,7 +210,7 @@ mkf firm_years
 frame firm_years {
 	#delimit ;
 
-	odbc load, clear dsn(wrds) exec("
+	jdbc load, clear exec("
 		select 
 			a.gvkey, a.datadate, b.lpermno as permno
 		from
@@ -239,7 +239,7 @@ mkf msf
 frame msf {
 	#delimit ;
 
-	odbc load, clear dsn(wrds) exec("
+	jdbc load, clear exec("
 		select 
 			permno, date, ret
 		from
@@ -294,7 +294,7 @@ save "$path/retvol", replace
 ADVANCED SUMMARIZATION USING STATSBY
 
 The collapse command is very useful but it cannot capture more 
-advanced staistics such as regression coefficients or R2s. For these more
+advanced statistics such as regression coefficients or R2s. For these more
 complex computations, you will want to invoke the statsby command.
 
 Let's calculate some annual stock market betas using daily data over the 2011-2012 period.
@@ -305,7 +305,7 @@ mkf dsf
 frame dsf {
 	#delimit ;
 
-	odbc load, clear dsn(wrds) exec("
+	jdbc load, clear exec("
 		select 
 			a.permno, a.date, a.ret, b.vwretd
 		from
