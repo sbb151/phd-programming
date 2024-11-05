@@ -12,10 +12,10 @@ Let's finish our discussion of merging from last time. How can we attach the ini
 ### Download data for session
 
 ```stata
-odbc load, clear dsn(wrds) exec("SELECT * FROM fisd.fisd_issue")
+jdbc load, clear exec("SELECT * FROM fisd.fisd_issue")
 save "$path/fisd_issue", replace
 
-odbc load, clear dsn(wrds) exec("SELECT * FROM fisd.fisd_ratings")
+jdbc load, clear exec("SELECT * FROM fisd.fisd_ratings")
 save "$path/fisd_ratings", replace
 ```
 
@@ -230,7 +230,7 @@ mkf firm_years
 frame firm_years {
 	#delimit ;
 
-	odbc load, clear dsn(wrds) exec("
+	jdbc load, clear exec("
 		select 
 			a.gvkey, a.datadate, b.lpermno as permno
 		from
@@ -261,7 +261,7 @@ mkf msf
 frame msf {
 	#delimit ;
 
-	odbc load, clear dsn(wrds) exec("
+	jdbc load, clear exec("
 		select 
 			permno, date, ret
 		from
@@ -326,7 +326,7 @@ mkf dsf
 frame dsf {
 	#delimit ;
 
-	odbc load, clear dsn(wrds) exec("
+	jdbc load, clear exec("
 		select 
 			a.permno, a.date, a.ret, b.vwretd
 		from
